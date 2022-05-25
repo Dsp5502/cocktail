@@ -1,3 +1,5 @@
+import Cards from '../components/cards/Cards';
+import Search from '../components/search/Search';
 import { getData } from '../helpers/getData';
 
 function AppRoutes() {
@@ -10,17 +12,8 @@ function AppRoutes() {
 
 
   return <div className='App'>
-
-    <div className='card'>
-      <div>
-        <img src="" alt="cocktel" className="cardImg" />
-      </div>
-
-      <div className='BottomCardInfo'>
-        <button>agregar</button>
-        <button>eliminar</button>
-      </div>
-    </div>
+    <center> <Search /></center>
+    <Cards></Cards>
 
   </div>;
 
