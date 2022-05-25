@@ -5,7 +5,7 @@ La App consume los datos de la API thecocktaildb, se desarrolló por medio de Re
 Gestión de la data.
 
 **********************
- ### Tecnologías usadas 💻
+ ### Tecnologías usadas 
 
 `REACT JS / REDUX /FIREBASE / CSS`
 *********************
@@ -24,7 +24,7 @@ Para clonar y/o forkear la App use los comandos git clone o git fork, según sea
 
 **********************
 
-### Autoras ✒️
+### Colaboradores
 
 * Anyelith Jacobo   - Desarrolladora frontend - [anyelithj](https://github.com/anyelithj)
 * Daniel Corredor Acostada - Desarrolladora frontend - [dann95moz](https://github.com/dann95moz)
