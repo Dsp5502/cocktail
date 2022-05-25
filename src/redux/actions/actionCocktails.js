@@ -14,3 +14,10 @@ export const DeleteCocktail = (id) => ({
   type: typesCocktail.deleteCocktail,
   payload: id,
 });
+
+export const searchCocktail = (cocktail) => {
+  return {
+    type: typesCocktail.searchCocktail,
+    payload: cocktail
+  }
+}
