@@ -55,15 +55,7 @@ const Cards = ({ infoCocktel }) => {
                     </div>
                 </div>
             ))}
-            <div className='BottomCardInfo'>
-                <button
-                    className='cardButton'
 
-                >
-                    agregar
-                </button>
-                <button className='cardButton'>eliminar</button>
-            </div>
         </div>
 
     );
