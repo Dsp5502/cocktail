@@ -1,1 +1,32 @@
 
+.card{
+    width:14%;
+    height:300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    position:relative;
+}
+.BottomCardInfo{
+    height: auto;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    display:flex;
+    justify-content:space-between;
+    
+    
+}
+.cardImg{
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    width:100%;
+    height:100px;
+}
+button{
+    height:100px;
+    width:50%;
+    
+    border: 1px solid black;
+    background-color:white;
+    border-radius:8px;
+}
