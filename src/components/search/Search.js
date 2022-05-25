@@ -1,12 +1,32 @@
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from 'yup'
+import { useDispatch } from "react-redux";
+import { searchCocktail } from "../../redux/actions/actionCocktails";
 
-const Search = () => {
+const Search = ({setCocktel}) => {
+    // const dispatch = useDispatch()
+
+    const formik = useFormik({
+        initialValues: {
+            search: ''
+        }, validationSchema: Yup.object({
+            search: Yup.string().required()
+        }),
+        onSubmit:({search})=>{
+            console.log(search);
+            setCocktel(search)
+            // dispatch(searchCocktail(search))
+        }
+
+    })
   return (
-    <form>
+    <form onSubmit={formik.handleSubmit}>
       <input
         type="text"
         name="search"
         placeholder="Search for a Cocktail..."
+        onChange={formik.handleChange}
         required
       />
       <button type="submit">

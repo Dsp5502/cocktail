@@ -47,6 +47,7 @@ export const DeleteCocktail = (id) => ({
   payload: id,
 });
 
+
 export const deleteProductAsync = (id) => {
   return async (dispatch) => {
     const colleccionTraer = collection(db, 'cocktails');
@@ -59,3 +60,12 @@ export const deleteProductAsync = (id) => {
     dispatch(listProductAsync());
   };
 };
+
+
+export const searchCocktail = (cocktail) => {
+  return {
+        type: typesCocktail.searchCocktail,
+        payload: cocktail
+      }
+}
+

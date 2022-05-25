@@ -18,6 +18,10 @@ export const cocktailReducers = (state = initialState, action) => {
       return {
         cocktails: state.cocktails.filter((item) => item.id !== action.payload),
       };
+    case typesCocktail.searchCocktail:
+      return {
+        cocktails: action.payload
+      }
     default:
       return state;
   }
