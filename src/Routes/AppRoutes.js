@@ -15,9 +15,9 @@ function AppRoutes() {
       .catch(console.log);
   }, [urlCocktails]);
 
-  console.log(infoCocktel, 'test');
+  // console.log(infoCocktel, 'test');
 
-  console.log(cocktel);
+  // console.log(cocktel);
 
   return (
     <div className='App'>

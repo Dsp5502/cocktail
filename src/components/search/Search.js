@@ -5,8 +5,7 @@ import { useDispatch } from "react-redux";
 import { searchCocktail } from "../../redux/actions/actionCocktails";
 
 const Search = ({setCocktel}) => {
-    // const dispatch = useDispatch()
-
+    console.log(setCocktel)
     const formik = useFormik({
         initialValues: {
             search: ''
@@ -16,10 +15,10 @@ const Search = ({setCocktel}) => {
         onSubmit:({search})=>{
             console.log(search);
             setCocktel(search)
-            // dispatch(searchCocktail(search))
         }
 
     })
+   
   return (
     <form onSubmit={formik.handleSubmit}>
       <input
