@@ -21,7 +21,7 @@ const Cards = ({ infoCocktel }) => {
                                 alt='imagen de cocktel'
                                 className='cardImg'
                             />
-                            <h2>{coctail.strDrink}</h2>
+                            <h2>Name:{coctail.strDrink}</h2>
                             <h3>tags</h3>
                             <h3>Ingredients:</h3>
                             <div className='ingredients'>
@@ -42,9 +42,10 @@ const Cards = ({ infoCocktel }) => {
                                 <h5>{coctail.strIngredient15}</h5>
                             </div>
                             <hr />
+
                             <h5>Instructions:</h5>
-                            <h5> {coctail.strInstructions}</h5>
-                            <h3>{coctail.strGlass}</h3>
+                            <h5 className="instructions"> {coctail.strInstructions}</h5>
+                            <h3>Glass: {coctail.strGlass}</h3>
                             <h3>Category:&nbsp;{coctail.strCategory}</h3>
                         </div>
 
