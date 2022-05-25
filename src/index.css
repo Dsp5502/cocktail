@@ -1,7 +1,11 @@
 
-
+.Cards{
+    display: flex;
+    gap:14px;
+    flex-wrap: wrap;
+}
 .card{
-    width:14%;
+    width:200px;
     height:500px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
