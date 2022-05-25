@@ -1,20 +1,31 @@
+import { useEffect, useState } from 'react';
 import Cards from '../components/cards/Cards';
 import Search from '../components/search/Search';
 import { getData } from '../helpers/getData';
 
 function AppRoutes() {
-  const urlCocktails =
-    'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Brandy';
+  const [cocktel, setCocktel] = useState('');
+  const [infoCocktel, setInfoCocktel] = useState([]);
+  const urlCocktails = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktel}`;
+  useEffect(() => {
+    getData(urlCocktails)
+      .then((cocktel) => {
+        setInfoCocktel(cocktel);
+      })
+      .catch(console.log);
+  }, [urlCocktails]);
 
-  getData(urlCocktails).then(console.log).catch(console.log);
+  console.log(infoCocktel, 'test');
+
+  console.log(cocktel);
 
   return (
     <div className='App'>
       <center>
         {' '}
-        <Search />
+        <Search setCocktel={setCocktel} />
       </center>
-      <Cards></Cards>
+      <Cards infoCocktel={infoCocktel} />
     </div>
   );
 }
