@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { searchCocktail } from "../../redux/actions/actionCocktails";
 
 const Search = ({setCocktel}) => {
+    console.log(setCocktel)
     const formik = useFormik({
         initialValues: {
             search: ''
