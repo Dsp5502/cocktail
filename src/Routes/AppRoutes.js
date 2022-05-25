@@ -16,6 +16,7 @@ function AppRoutes() {
   }, [urlCocktails]);
 
   console.log(infoCocktel, 'test');
+  console.log(urlCocktails);
 
   console.log(cocktel);
 

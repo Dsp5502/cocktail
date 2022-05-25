@@ -1,14 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addCocktailAsync } from '../../redux/actions/actionCocktails';
 
 const Cards = ({ infoCocktel }) => {
-  console.log(infoCocktel);
-  /*{coctail.map((coctail) => (
-        <div key={coctail.idDrink}>
-          <h1>{coctail.strDrink}</h1>
-          <img src={coctail.strDrinkThumb} alt={coctail.strDrink} />
-          <p>{coctail.strInstructions}</p>
-        </div>
-      ))}*/
+  const dispatch = useDispatch();
+  const handleAddOrder = (cocktel) => {
+    dispatch(addCocktailAsync(cocktel));
+    console.log(cocktel);
+  };
 
   return (
     <div className='Cards'>
@@ -43,7 +42,12 @@ const Cards = ({ infoCocktel }) => {
             </div>
 
             <div className='BottomCardInfo'>
-              <button className='cardButton'>agregar</button>
+              <button
+                className='cardButton'
+                onClick={() => handleAddOrder(coctail)}
+              >
+                agregar
+              </button>
               <button className='cardButton'>eliminar</button>
             </div>
           </div>
