@@ -16,7 +16,7 @@ function AppRoutes() {
     ).catch(console.log);
   }, [])
 
-  console.log(infoCocktel, "test");
+//   console.log(infoCocktel, "test");
 
 console.log(cocktel)
 
