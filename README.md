@@ -15,12 +15,12 @@ Para clonar y/o forkear la App use los comandos git clone o git fork, según sea
 
 ## Instalar y Ejecutar el aplicativo
 
-Use el comando npm install para instalar todas las dependencias y librerias usadas en el proyecto
-Para correr el proyect use el comando npm run start
+-Use el comando npm install para instalar todas las dependencias y librerias usadas en el proyecto
+-Para correr el proyect use el comando npm run start
 
 ## Participantes
 
-Anyelith Jacobo - Desarrolladora frontend - anyelithj
-Daniel Corredor Acostada - Desarrolladora frontend - dann95moz
-David Puerto Guerrero - Desarrolladora frontend - Dsp5502
+-Anyelith Jacobo - Desarrolladora frontend - anyelithj
+-Daniel Corredor Acostada - Desarrolladora frontend - dann95moz
+-David Puerto Guerrero - Desarrolladora frontend - Dsp5502
 
