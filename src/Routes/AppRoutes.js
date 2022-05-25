@@ -5,7 +5,7 @@ function AppRoutes() {
 
     <div className='card'>
       <div>
-        <img src="" alt="cocktel" className="cardImg" />
+        <img src="" alt="imagen de cocktel" className="cardImg" />
       </div>
 
       <div className='BottomCardInfo'>
