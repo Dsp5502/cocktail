@@ -49,9 +49,10 @@ export const DeleteCocktail = (id) => ({
 });
 
 export const DeleteCocktailAsync = (id) => {
+  console.log(id);
   return async (dispatch) => {
     const colleccionTraer = collection(db, 'cocktai');
-    const q = query(colleccionTraer, where('id', '==', id));
+    const q = query(colleccionTraer, where('idDrink', '==', id));
     const traerDatosQ = await getDocs(q);
     traerDatosQ.forEach((docum) => {
       deleteDoc(doc(db, 'cocktai', docum.id));

@@ -12,19 +12,19 @@ const Cards = ({ infoCocktel }) => {
   return (
     <div className='cards'>
       {infoCocktel?.drinks?.map((coctail) => (
-        <div key={coctail.idDrink} class='card'>
-          <div class='card-info'>
-            <div class='card-avatar'>
+        <div key={coctail.idDrink} className='card'>
+          <div className='card-info'>
+            <div className='card-avatar'>
               <img
                 className='image-card'
                 src={coctail.strDrinkThumb}
                 alt='cocktail'
               />
             </div>
-            <div class='card-title'>{coctail.strDrink}</div>
-            <div class='card-subtitle'>{coctail.strCategory}</div>
+            <div className='card-title'>{coctail.strDrink}</div>
+            <div className='card-subtitle'>{coctail.strCategory}</div>
 
-            <div class='card-tags'>
+            <div className='card-tags'>
               {coctail.strTags === null ? (
                 <span className='tags'>All</span>
               ) : (
@@ -37,7 +37,7 @@ const Cards = ({ infoCocktel }) => {
             </div>
           </div>
 
-          <div class='card-footer'>
+          <div className='card-footer'>
             <button
               className='btn-card'
               onClick={() => handleAddOrder(coctail)}
