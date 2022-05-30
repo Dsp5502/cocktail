@@ -34,7 +34,7 @@ export const listCocktail = (cocktail) => ({
 
 export const listProductAsync = () => {
   return async (dispatch) => {
-    const collectionTraer = await getDocs(collection(db, 'cocktails'));
+    const collectionTraer = await getDocs(collection(db, 'cocktai'));
     const productos = [];
     collectionTraer.forEach((doc) => {
       productos.push({ ...doc.data() });
@@ -50,11 +50,11 @@ export const DeleteCocktail = (id) => ({
 
 export const DeleteCocktailAsync = (id) => {
   return async (dispatch) => {
-    const colleccionTraer = collection(db, 'cocktails');
+    const colleccionTraer = collection(db, 'cocktai');
     const q = query(colleccionTraer, where('id', '==', id));
     const traerDatosQ = await getDocs(q);
     traerDatosQ.forEach((docum) => {
-      deleteDoc(doc(db, 'productpsAmazonas', docum.id));
+      deleteDoc(doc(db, 'cocktai', docum.id));
     });
     dispatch(DeleteCocktail(id));
     dispatch(listProductAsync());
