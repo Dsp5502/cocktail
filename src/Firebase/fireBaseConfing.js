@@ -7,12 +7,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyBKCowo4HLUbs2xUyNTw5DL97WICWuUBDo',
-  authDomain: 'cocktels.firebaseapp.com',
-  projectId: 'cocktels',
-  storageBucket: 'cocktels.appspot.com',
-  messagingSenderId: '602460268170',
-  appId: '1:602460268170:web:3b6cb3c06232cbcafd6f73',
+  apiKey: 'AIzaSyBaQi_CMb1GSMzMgQE0ihjk0TKoNSNTLP8',
+  authDomain: 'proyectcocktails.firebaseapp.com',
+  projectId: 'proyectcocktails',
+  storageBucket: 'proyectcocktails.appspot.com',
+  messagingSenderId: '206173664435',
+  appId: '1:206173664435:web:f7c7a0ad790e67eb1c6cc6',
 };
 
 // Initialize Firebase

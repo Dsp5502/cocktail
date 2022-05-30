@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import Cards from '../components/cards/Cards';
-import Search from '../components/search/Search';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Start from '../components/Start';
 import { getData } from '../helpers/getData';
 
 function AppRoutes() {
@@ -15,19 +16,17 @@ function AppRoutes() {
       .catch(console.log);
   }, [urlCocktails]);
 
-  console.log(infoCocktel, 'test');
-  console.log(urlCocktails);
-
-  // console.log(cocktel);
+  console.log(infoCocktel);
 
   return (
-    <div className='App'>
-      <center>
-        {' '}
-        <Search setCocktel={setCocktel} />
-      </center>
-      <Cards infoCocktel={infoCocktel} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path='/'
+          element={<Start setCocktel={setCocktel} infoCocktel={infoCocktel} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
