@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import Search from './search/Search';
 
 const Navbar = ({ setCocktel, setModal, setAnimarModal }) => {
+  const navigate = useNavigate();
   const handleModal = () => {
     setModal(true);
     setTimeout(() => {
@@ -10,6 +12,7 @@ const Navbar = ({ setCocktel, setModal, setAnimarModal }) => {
   return (
     <div className='navbar'>
       <img
+        onClick={() => navigate('/')}
         className='navbar-logo'
         src='https://res.cloudinary.com/djjgtili7/image/upload/v1653929090/Tropical_Cocktails_1_oohphd.png'
         alt='logo'
