@@ -10,6 +10,7 @@ function AppRoutes() {
   const [infoCocktel, setInfoCocktel] = useState([]);
   const [DescriptionCocktail, setDescriptionCocktail] = useState([]);
   const urlCocktails = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktel}`;
+
   useEffect(() => {
     getData(urlCocktails)
       .then((cocktel) => {
