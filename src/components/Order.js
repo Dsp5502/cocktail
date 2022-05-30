@@ -18,13 +18,13 @@ const Order = ({ setModal, animarModal }) => {
   }, []);
 
   return (
-    <div className='modal '>
+    <div className='modal  '>
       <div className='cerrar-modal'>
         <img onClick={handleCerrarModal} src={Cerrar} alt='cerrar' />
       </div>
       <h2 className='title-order'>Order</h2>
 
-      <div className={` list ${animarModal ? 'animar' : 'cerrar'}`}>
+      <div className={` list prueba ${animarModal ? 'animar' : 'cerrar'}`}>
         <CardsOrder cocktails={cocktails} />
       </div>
     </div>

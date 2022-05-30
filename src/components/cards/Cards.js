@@ -1,12 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { addCocktailAsync } from '../../redux/actions/actionCocktails';
 
-const Cards = ({ infoCocktel }) => {
+const Cards = ({ infoCocktel, setDescriptionCocktail }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleAddOrder = (cocktel) => {
     dispatch(addCocktailAsync(cocktel));
     console.log(cocktel);
+  };
+  const description = (coctail) => {
+    navigate(`/cocktail/${coctail.strDrink}`);
+    setDescriptionCocktail(coctail);
   };
 
   return (
@@ -44,6 +50,13 @@ const Cards = ({ infoCocktel }) => {
               type='button'
             >
               Add to order
+            </button>
+            <button
+              className='btn-card'
+              onClick={() => description(coctail)}
+              type='button'
+            >
+              Description
             </button>
           </div>
         </div>

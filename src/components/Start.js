@@ -3,7 +3,7 @@ import Cards from './cards/Cards';
 import Navbar from './Navbar';
 import Order from './Order';
 
-const Start = ({ setCocktel, infoCocktel }) => {
+const Start = ({ setCocktel, infoCocktel, setDescriptionCocktail }) => {
   const [modal, setModal] = useState(false);
   const [animarModal, setAnimarModal] = useState(false);
   return (
@@ -18,7 +18,10 @@ const Start = ({ setCocktel, infoCocktel }) => {
           />
         )}
 
-        <Cards infoCocktel={infoCocktel} />
+        <Cards
+          infoCocktel={infoCocktel}
+          setDescriptionCocktail={setDescriptionCocktail}
+        />
       </div>
       {modal ? (
         <Order setModal={setModal} modal={modal} animarModal={animarModal} />
